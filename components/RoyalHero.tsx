@@ -1,19 +1,50 @@
+"use client";
+
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import AnimatedCounter from "./AnimatedCounter";
 
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    let animationFrameId: number;
+    
+    const checkTime = () => {
+      if (videoRef.current) {
+        const video = videoRef.current;
+        // Check time with high precision (requestAnimationFrame runs at 60fps)
+        // Reset slightly before the end (e.g. 0.2s) to avoid the flash
+        if (video.duration && video.duration - video.currentTime < 0.2) {
+          video.currentTime = 0.05; // skip the very first black frames if any
+        }
+      }
+      animationFrameId = requestAnimationFrame(checkTime);
+    };
+
+    animationFrameId = requestAnimationFrame(checkTime);
+    return () => cancelAnimationFrame(animationFrameId);
+  }, []);
+
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative h-screen">
-        <div className="h-full w-full">
-          <Image
-            src="/assets/royal_hero.png"
-            alt="Hero Background"
+      <div className="relative h-screen bg-[#000214]">
+        {/* Fallback image behind the video to mask seeking flashes */}
+        <div className="absolute inset-0 w-full h-full">
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
             className="h-full w-full object-cover"
-            width={1920}
-            height={1080}
-          />
+          >
+            <source src="/hero-video/vlcsnap-2026-06-11-15h43m13s265@3x.mp4" type="video/mp4" />
+          </video>
+          {/* Gradient overlay for smooth transition */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#000214] via-[#000214]/20 to-transparent pointer-events-none"></div>
         </div>
         <div className="absolute inset-0 flex items-center">
           <div className="w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
@@ -31,7 +62,7 @@ export default function Hero() {
               </p>
               <div className="flex gap-12 mt-8">
                 <div className="flex flex-col">
-                  <div className="text-4xl md:text-5xl font-bold text-[#EAB308] mb-1">
+                  <div className="text-5xl md:text-6xl text-[#EAB308] mb-1 satisfy-font font-normal tracking-wide">
                     <AnimatedCounter end={23} />
                   </div>
                   <div className="text-white/90 text-sm md:text-base font-medium uppercase tracking-wider">
@@ -39,7 +70,7 @@ export default function Hero() {
                   </div>
                 </div>
                 <div className="flex flex-col">
-                  <div className="text-4xl md:text-5xl font-bold text-[#EAB308] mb-1">
+                  <div className="text-5xl md:text-6xl text-[#EAB308] mb-1 satisfy-font font-normal tracking-wide">
                     <AnimatedCounter end={20} suffix="+" />
                   </div>
                   <div className="text-white/90 text-sm md:text-base font-medium uppercase tracking-wider">

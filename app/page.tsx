@@ -6,12 +6,12 @@ import PlatformHub from "@/components/PlatformHub";
 import FieldBanner from "@/components/FieldBanner";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
-import BackToTop from "@/components/BackToTop";
+import FloatingActionButtons from "@/components/FloatingActionButtons";
 
 export default function Home() {
   return (
     <div className="w-full min-h-screen bg-black text-white font-sans antialiased selection:bg-blue-500 selection:text-white flex flex-col items-center">
-      <BackToTop />
+      <FloatingActionButtons />
       {/* Navigation Header */}
       <Header />
 
