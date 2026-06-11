@@ -129,7 +129,7 @@ export default function PlatformHub() {
           THE DETAILED ALTERNATING SHOWCASE CARDS (9 FEATURES)
           ========================================== */}
       <section id="features" className="py-24 bg-white text-zinc-900 relative w-full flex flex-col items-center">
-        <div className="max-w-7xl mx-auto px-6 space-y-20 w-full">
+        <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-24 space-y-20 w-full">
 
           {/* Centered Title block */}
           <div className="text-center max-w-3xl mx-auto">

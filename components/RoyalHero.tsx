@@ -16,7 +16,7 @@ export default function Hero() {
           />
         </div>
         <div className="absolute inset-0 flex items-center">
-          <div className="w-full max-w-7xl mx-auto px-6">
+          <div className="w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
             <div className="w-full md:w-1/2 lg:w-5/12">
               <h1 className="text-5xl font-bold text-white leading-snug">
                 Driving Smarter Logistics Through{" "}
