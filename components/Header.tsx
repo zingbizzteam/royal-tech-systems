@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 // Royal Logo Image Component
@@ -21,9 +21,32 @@ export function RoyalLogo() {
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        // Scrolling down
+        setIsVisible(false);
+        setMobileMenuOpen(false); // Close menu when scrolling down
+      } else {
+        // Scrolling up
+        setIsVisible(true);
+      }
+      
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/95 border-b border-zinc-150 shadow-sm backdrop-blur-md">
+    <header className={`sticky top-0 z-50 w-full bg-white/95 border-b border-zinc-150 shadow-sm backdrop-blur-md transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}>
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         
         {/* Royal Logo */}
