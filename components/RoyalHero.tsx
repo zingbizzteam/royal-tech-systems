@@ -9,7 +9,7 @@ export default function Hero() {
 
   useEffect(() => {
     let animationFrameId: number;
-    
+
     const checkTime = () => {
       if (videoRef.current) {
         const video = videoRef.current;
@@ -71,7 +71,7 @@ export default function Hero() {
                 </div>
                 <div className="flex flex-col">
                   <div className="text-5xl md:text-6xl text-[#EAB308] mb-1 satisfy-font font-normal tracking-wide">
-                    <AnimatedCounter end={20} suffix="+" />
+                    <AnimatedCounter end={2000} suffix="+" />
                   </div>
                   <div className="text-white/90 text-sm md:text-base font-medium uppercase tracking-wider">
                     Trusted Clients
