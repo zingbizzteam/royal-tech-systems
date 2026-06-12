@@ -144,11 +144,11 @@ export default function PlatformHub() {
           {/* ==========================================
               PREMIUM DARK-THEMED ARCHITECTURE MENU
               ========================================== */}
-          <div className="w-full max-w-6xl mx-auto bg-[#0c0c0e] border border-zinc-800/80 rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden">
+          <div className="hidden md:block w-full max-w-6xl mx-auto bg-[#0c0c0e] border border-zinc-800/80 rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/5 to-transparent pointer-events-none"></div>
 
             {/* Central Platform Flow Connector UI (eR Logo & SVG Branching Lines) */}
-            <div className="hidden lg:flex flex-col items-center justify-center relative w-full max-w-5xl mx-auto">
+            <div className="hidden md:block lg:flex flex-col items-center justify-center relative w-full max-w-5xl mx-auto">
               {/* Helper Text */}
               <div className="absolute right-0 top-3 -translate-y-1/2 hidden md:block">
                 <p className="text-zinc-500 text-xs font-semibold uppercase tracking-[0.2em] text-right">
@@ -245,7 +245,7 @@ export default function PlatformHub() {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             {/* Left Visual Column */}
-            <div className="lg:col-span-6 w-full flex justify-center order-2 lg:order-1">
+            <div className="lg:col-span-6 w-full flex justify-center order-1 lg:order-1">
               <div className="w-full max-w-xl aspect-[1.4] bg-zinc-100 rounded-3xl overflow-hidden border border-zinc-200 shadow-xl relative group">
                 <Image
                   src="/assets/import-export.png"
@@ -256,7 +256,7 @@ export default function PlatformHub() {
               </div>
             </div>
             {/* Right Text Column */}
-            <div className="lg:col-span-6 flex flex-col gap-6 order-1 lg:order-2">
+            <div className="lg:col-span-6 flex flex-col gap-6 order-2 lg:order-2">
               <h2 className="text-3xl md:text-4xl font-extrabold text-zinc-900 tracking-tight">
                 End-to-End Import & Export Management
               </h2>
@@ -287,7 +287,7 @@ export default function PlatformHub() {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             {/* Left Text Column */}
-            <div className="lg:col-span-6 flex flex-col gap-6">
+            <div className="lg:col-span-6 flex flex-col gap-6 order-2 lg:order-1">
               <h2 className="text-3xl md:text-4xl font-extrabold text-zinc-900 tracking-tight">
                 Effortless BE & SB Filing for SEZ Units
               </h2>
@@ -307,7 +307,7 @@ export default function PlatformHub() {
               </div>
             </div>
             {/* Right Visual Column */}
-            <div className="lg:col-span-6 w-full flex justify-center">
+            <div className="lg:col-span-6 w-full flex justify-center order-1 lg:order-2">
               <div className="w-full max-w-xl aspect-[1.4] bg-zinc-100 rounded-3xl overflow-hidden border border-zinc-200 shadow-xl relative group">
                 <Image
                   src="/assets/customs-filing.png"
@@ -329,7 +329,7 @@ export default function PlatformHub() {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             {/* Left Visual Column */}
-            <div className="lg:col-span-6 w-full flex justify-center order-2 lg:order-1">
+            <div className="lg:col-span-6 w-full flex justify-center order-1 lg:order-1">
               <div className="w-full max-w-xl aspect-[1.4] bg-zinc-100 rounded-3xl overflow-hidden border border-zinc-200 shadow-xl relative group">
                 <Image
                   src="/assets/freight-docs.png"
@@ -340,7 +340,7 @@ export default function PlatformHub() {
               </div>
             </div>
             {/* Right Text Column */}
-            <div className="lg:col-span-6 flex flex-col gap-6 order-1 lg:order-2">
+            <div className="lg:col-span-6 flex flex-col gap-6 order-2 lg:order-2">
               <h2 className="text-3xl md:text-4xl font-extrabold text-zinc-900 tracking-tight">
                 Smart & Automated Freight Documentation
               </h2>
@@ -371,7 +371,7 @@ export default function PlatformHub() {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             {/* Left Text Column */}
-            <div className="lg:col-span-6 flex flex-col gap-6">
+            <div className="lg:col-span-6 flex flex-col gap-6 order-2 lg:order-1">
               <h2 className="text-3xl md:text-4xl font-extrabold text-zinc-900 tracking-tight">
                 Transform NVOCC Operations with Next-Gen ERP
               </h2>
@@ -391,7 +391,7 @@ export default function PlatformHub() {
               </div>
             </div>
             {/* Right Visual Column */}
-            <div className="lg:col-span-6 w-full flex justify-center">
+            <div className="lg:col-span-6 w-full flex justify-center order-1 lg:order-2">
               <div className="w-full max-w-xl aspect-[1.4] bg-zinc-100 rounded-3xl overflow-hidden border border-zinc-200 shadow-xl relative group">
                 <Image
                   src="/assets/nvocc-ops.png"
@@ -413,7 +413,7 @@ export default function PlatformHub() {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             {/* Left Visual Column */}
-            <div className="lg:col-span-6 w-full flex justify-center order-2 lg:order-1">
+            <div className="lg:col-span-6 w-full flex justify-center order-1 lg:order-1">
               <div className="w-full max-w-xl aspect-[1.4] bg-zinc-100 rounded-3xl overflow-hidden border border-zinc-200 shadow-xl relative group">
                 <Image
                   src="/assets/scmtr-filing.png"
@@ -424,7 +424,7 @@ export default function PlatformHub() {
               </div>
             </div>
             {/* Right Text Column */}
-            <div className="lg:col-span-6 flex flex-col gap-6 order-1 lg:order-2">
+            <div className="lg:col-span-6 flex flex-col gap-6 order-2 lg:order-2">
               <h2 className="text-3xl md:text-4xl font-extrabold text-zinc-900 tracking-tight">
                 Seamless SCMTR Filing & Smart Integration
               </h2>
@@ -455,7 +455,7 @@ export default function PlatformHub() {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             {/* Left Text Column */}
-            <div className="lg:col-span-6 flex flex-col gap-6">
+            <div className="lg:col-span-6 flex flex-col gap-6 order-2 lg:order-1">
               <h2 className="text-3xl md:text-4xl font-extrabold text-zinc-900 tracking-tight">
                 Effortless Console Manifest Filing
               </h2>
@@ -475,7 +475,7 @@ export default function PlatformHub() {
               </div>
             </div>
             {/* Right Visual Column */}
-            <div className="lg:col-span-6 w-full flex justify-center">
+            <div className="lg:col-span-6 w-full flex justify-center order-1 lg:order-2">
               <div className="w-full max-w-xl aspect-[1.4] bg-zinc-100 rounded-3xl overflow-hidden border border-zinc-200 shadow-xl relative group">
                 <Image
                   src="/assets/console-manifest.png"
@@ -497,7 +497,7 @@ export default function PlatformHub() {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             {/* Left Visual Column */}
-            <div className="lg:col-span-6 w-full flex justify-center order-2 lg:order-1">
+            <div className="lg:col-span-6 w-full flex justify-center order-1 lg:order-1">
               <div className="w-full max-w-xl aspect-[1.4] bg-zinc-100 rounded-3xl overflow-hidden border border-zinc-200 shadow-xl relative group">
                 <Image
                   src="/assets/trade-accounting.png"
@@ -508,7 +508,7 @@ export default function PlatformHub() {
               </div>
             </div>
             {/* Right Text Column */}
-            <div className="lg:col-span-6 flex flex-col gap-6 order-1 lg:order-2">
+            <div className="lg:col-span-6 flex flex-col gap-6 order-2 lg:order-2">
               <h2 className="text-3xl md:text-4xl font-extrabold text-zinc-900 tracking-tight">
                 Smart Accounting for Global Trade
               </h2>
@@ -539,7 +539,7 @@ export default function PlatformHub() {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             {/* Left Text Column */}
-            <div className="lg:col-span-6 flex flex-col gap-6">
+            <div className="lg:col-span-6 flex flex-col gap-6 order-2 lg:order-1">
               <h2 className="text-3xl md:text-4xl font-extrabold text-zinc-900 tracking-tight">
                 Automate Documentation for Faster Global Trade
               </h2>
@@ -559,7 +559,7 @@ export default function PlatformHub() {
               </div>
             </div>
             {/* Right Visual Column */}
-            <div className="lg:col-span-6 w-full flex justify-center">
+            <div className="lg:col-span-6 w-full flex justify-center order-1 lg:order-2">
               <div className="w-full max-w-xl aspect-[1.4] bg-zinc-100 rounded-3xl overflow-hidden border border-zinc-200 shadow-xl relative group">
                 <Image
                   src="/assets/auto-docs.png"
@@ -581,7 +581,7 @@ export default function PlatformHub() {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             {/* Left Visual Column */}
-            <div className="lg:col-span-6 w-full flex justify-center order-2 lg:order-1">
+            <div className="lg:col-span-6 w-full flex justify-center order-1 lg:order-1">
               <div className="w-full max-w-xl aspect-[1.4] bg-zinc-100 rounded-3xl overflow-hidden border border-zinc-200 shadow-xl relative group">
                 <Image
                   src="/assets/duty-free.png"
@@ -592,7 +592,7 @@ export default function PlatformHub() {
               </div>
             </div>
             {/* Right Text Column */}
-            <div className="lg:col-span-6 flex flex-col gap-6 order-1 lg:order-2">
+            <div className="lg:col-span-6 flex flex-col gap-6 order-2 lg:order-2">
               <h2 className="text-3xl md:text-4xl font-extrabold text-zinc-900 tracking-tight">
                 Smarter Duty-Free Ops with eRoyal ERP
               </h2>
